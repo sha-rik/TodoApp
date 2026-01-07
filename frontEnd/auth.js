@@ -1,4 +1,5 @@
-const BASE_URL = "http://127.0.0.1:6060/api/v1/node_js_project_routes";
+const BASE_URL = "https://todo-backend-s4xa.onrender.com/api/v1/node_js_project_routes";
+
 
 // ---------------- SIGNUP ----------------
 const signupForm = document.getElementById("signupForm");
