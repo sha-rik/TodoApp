@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Signup</title>
+</head>
+<body>
+
+  <h2>Signup</h2>
+
+  <form id="signupForm">
+    <div>
+      <label>First Name:</label>
+      <input type="text" id="firstName" required />
+    </div>
+
+    <div>
+      <label>Last Name:</label>
+      <input type="text" id="lastName" required />
+    </div>
+
+    <div>
+      <label>Email:</label>
+      <input type="email" id="signupEmail" required />
+    </div>
+
+    <div>
+      <label>Password:</label>
+      <input type="password" id="signupPassword" required />
+    </div>
+
+    <button type="submit">Signup</button>
+  </form>
+
+  <br />
+
+  <button id="goToLogin">
+    Already have an account? Login
+  </button>
+
+  <p id="signupMsg"></p>
+
+  <script src="auth.js"></script>
+</body>
+</html>
