@@ -98,6 +98,6 @@ if (loginForm) {
 const goToSignup = document.getElementById("goToSignup");
 if (goToSignup) {
     goToSignup.addEventListener("click", () => {
-        window.location.href = "signup.html";
+        window.location.href = "signUp.html";
     });
 }
