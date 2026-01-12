@@ -1,5 +1,4 @@
 const BASE_URL = "https://todo-backend-s4xa.onrender.com/api/v1/node_js_project_routes";
-
 const token = localStorage.getItem("token");
 
 let heading = document.getElementById("heading");
@@ -17,6 +16,7 @@ async function fetchTodos() {
                 Authorization: `Bearer ${token}`,
             },
         });
+        
 
         if (!res.ok) {
             throw new Error("Unauthorized or failed request");

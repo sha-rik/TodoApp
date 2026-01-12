@@ -13,16 +13,17 @@ heading.innerText = `Welcome to My Todos`;
 // ---------------- FETCH TODOS ----------------
 async function fetchTodos() {
     try {
+        
         const res = await fetch(`${BASE_URL}/student/getTodoById`, {
             headers: {
                 Authorization: `Bearer ${token}`,
             },
         });
-
+        
         if (!res.ok) {
             throw new Error("Unauthorized or failed request");
         }
-
+        
         const data = await res.json();
         renderTodos(data.data || []);
     } catch (err) {

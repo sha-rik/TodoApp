@@ -23,5 +23,4 @@ router.get('/admin/getTodo', auth,isAdmin,getTodo);
 // middleware
 
 
-
 module.exports = router;

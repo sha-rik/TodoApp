@@ -24,7 +24,6 @@ exports.createTodo = async (req, res) => {
         .json({
             
             error: error.message,
-            console: console.log("  Error h bhai"),
             
         });
     }
@@ -84,6 +83,7 @@ exports.getTodoById = async (req,res) => {
                 message: `Todo item not found for given user`
             });
         }
+        
         res.status(200).json({
             success: true,
             data: todoItem,

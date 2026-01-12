@@ -1,6 +1,15 @@
 const BASE_URL = "https://todo-backend-s4xa.onrender.com/api/v1/node_js_project_routes";
-
-
+let fun = function (role) {
+    if (role === "Admin") {
+        window.location.href = "admin.html";
+    }
+    else {
+        window.location.href = "todo.html";
+    }
+}
+let fun2 = function () {
+    window.location.href = "login.html";
+}
 // ---------------- SIGNUP ----------------
 const signupForm = document.getElementById("signupForm");
 
@@ -29,7 +38,8 @@ if (signupForm) {
 
             const data = await res.json();
             document.getElementById("signupMsg").innerText =
-                data.message || "Signup successful";
+                "Signup Successful.";
+            setTimeout(() => fun2(), 2500);
 
         } catch (err) {
             document.getElementById("signupMsg").innerText =
@@ -48,14 +58,7 @@ if (goToLogin) {
 
 // ---------------- LOGIN ----------------
 const loginForm = document.getElementById("loginForm");
-let fun = function (role) {
-    if (role === "Admin") {
-        window.location.href = "admin.html";
-    }
-    else {
-        window.location.href = "todo.html";
-    }
-}
+
 
 if (loginForm) {
     loginForm.addEventListener("submit", async (e) => {

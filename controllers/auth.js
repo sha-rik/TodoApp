@@ -38,13 +38,10 @@ exports.signup = async function (req, res) {
             password: hashedPassword,
             approved: approved,
             role: "Student"
-
-                
         })
-
         return res.status(201).json({
             success: true,
-            message: `Its not a good practice  but for now ${user}`,
+            user: user,
         })
 
 

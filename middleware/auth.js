@@ -13,6 +13,7 @@ exports.auth = async (req, res, next) => {
         let token = authHeader.split(" ")[1];
         let decoded = Jwt.verify(token, process.env.JWT_SECRET);
         req.user = decoded;
+        
         next();
     }
     catch (err) {
