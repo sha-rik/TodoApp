@@ -1,18 +1,21 @@
 const BASE_URL = "https://todo-backend-s4xa.onrender.com/api/v1/node_js_project_routes";
 
-// ===== Not letting the user or admin login again. =====
+// ===== AUTH GUARD (VERCEL SAFE) =====
 const token = localStorage.getItem("token");
 const role = localStorage.getItem("role");
 
-if (token && role) {
-    if (window.location.pathname.includes("login") || window.location.pathname.includes("signUp")) {
-        if (role === "Admin") {
-            window.location.href = "admin.html";
-        } else {
-            window.location.href = "todo.html";
-        }
+if (token && role) 
+{
+    if (role === "Admin") 
+    {
+        window.location.href = "admin.html";
+    } 
+    else 
+    {
+        window.location.href = "todo.html";
     }
 }
+
 
 
 let fun = function (role) {
