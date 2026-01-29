@@ -1,5 +1,8 @@
 const BASE_URL = "https://todo-backend-s4xa.onrender.com/api/v1/node_js_project_routes";
 const token = localStorage.getItem("token");
+let role = localStorage.getItem("role");
+console.log("Admin Token:", token);
+console.log("Admin Role:", role);
 
 let heading = document.getElementById("heading");
 // 🔒 Guard: no token, no entry
